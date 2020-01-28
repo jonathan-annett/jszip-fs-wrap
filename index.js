@@ -66,48 +66,7 @@ Object.defineProperties(module.exports,{
     },
     build : {
         value : function () {
-
-            var path = require("path"),
-            fs =require("fs"),
-            UglifyJS     = require("uglify-js"),
-            babel = require("babel-core"),
-            minifyJS = function minifyJS( js_src ) {
-               var result= UglifyJS.minify(js_src, {
-                   parse: {},
-                   compress: {},
-                   mangle: false,
-                   output: {
-                       code: true
-                   }
-               });
-               if (result.code) return result.code;
-
-               result = babel.transform(js_src,{minified:true});
-
-
-              return result.code;
-            };
-
-
-            var js_zipWrap_js = fs.readFileSync("./js_zipWrap.js","utf8");
-            js_zipWrap_js = makePackage("zipWrap",js_zipWrap_js);
-            fs.writeFileSync("./js_zipWrap.pkg.js",js_zipWrap_js);
-            js_zipWrap_js = minifyJS(js_zipWrap_js);
-            fs.writeFileSync("./js_zipWrap.min.js",js_zipWrap_js);
-
-            function makePackage(name,pkg_fn){
-
-                var pkg_bare = pkg_fn.toString().trimEnd();
-
-                var template = packageTemplate.toString().trimEnd();
-                template = template.substring(template.indexOf('{')+1,template.length-1).trim().split('function acme_package(){}');
-                template.push(template.pop().split('${acme}').join(name));
-
-                return template.join(('function()'+pkg_bare.substring(pkg_bare.indexOf('{'))));
-            }
-
-
-
+            require("simple-package-wrap").build(__dirname+"/js_zipWrap.js","zipFsWrap");
         }
     }
 });

@@ -1,4 +1,4 @@
-(function(x){x[0][x[1]]=(function(){
+(function($N){$N[0][$N[1]]=(function(){$N=!!$N[0].id;
 
 function zipWrap(zip,nodePath,cb){
     var
@@ -1129,4 +1129,4 @@ function zipWrap(zip,nodePath,cb){
 
 return  zipWrap;
 
-})();})(typeof process+typeof module+typeof require==='objectobjectfunction'?[module,"exports"]:[window,"zipWrap"]);
+})();})(typeof process+typeof module+typeof require==='objectobjectfunction'?[module,"exports"]:[window,"zipFsWrap"]);

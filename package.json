@@ -9,13 +9,13 @@
   "license": "MIT",
   "dependencies": {
     "jszip": "^3.2.2",
-    "jszip-utils": "^0.1.0",
-    "babel-core": "^6.26.3",
-    "uglify-js": "^3.7.2"
+    "jszip-utils": "^0.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "simple-package-wrap": "github:jonathan-annett/simple-package-wrap#502ba3512cba9fc3f1a5b6fcf5db40cc335b047f"
+  },
   "scripts": {
-      "test" : "node ./index.js --build"
+    "build": "node ./index.js --build"
   },
   "keywords": [],
   "main": "index.js",
