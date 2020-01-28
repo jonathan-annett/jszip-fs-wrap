@@ -8,11 +8,16 @@
   "description": "newly created repo",
   "license": "MIT",
   "dependencies": {
+    "jszip": "^3.2.2",
+    "jszip-utils": "^0.1.0",
+    "babel-core": "^6.26.3",
+    "uglify-js": "^3.7.2"
   },
   "devDependencies": {},
-  "scripts": {},
-  "keywords": [
-  ],
+  "scripts": {
+      "test" : "node ./index.js --build"
+  },
+  "keywords": [],
   "main": "index.js",
   "name": "jszip-fs-wrap",
   "repository": {
