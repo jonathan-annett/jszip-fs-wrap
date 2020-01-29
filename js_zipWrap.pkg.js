@@ -1,5 +1,6 @@
-(function($N){$N[0][$N[1]]=(function(){$N=!!$N[0].id;
-
+(function($N){
+$N[0][$N[1]]=(function($N){
+/*/home/jonathanmaxannett/jszip-fs-wrap/js_zipWrap.js*/
 function zipWrap(zip,nodePath,cb){
     var
     join=nodePath.join,
@@ -1128,5 +1129,6 @@ function zipWrap(zip,nodePath,cb){
 }
 
 return  zipWrap;
+})(!$N[0].Document);
 
-})();})(typeof process+typeof module+typeof require==='objectobjectfunction'?[module,"exports"]:[window,"zipFsWrap"]);
+})(typeof process+typeof module+typeof require==='objectobjectfunction'?[module,'exports']:[window,'zipFsWrap']);

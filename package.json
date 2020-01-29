@@ -12,7 +12,7 @@
     "jszip-utils": "^0.1.0"
   },
   "devDependencies": {
-    "simple-package-wrap": "github:jonathan-annett/simple-package-wrap#502ba3512cba9fc3f1a5b6fcf5db40cc335b047f"
+    "simple-package-wrap": "github:jonathan-annett/simple-package-wrap#1bed66ae3b3c7827f9c9ffe7d0942ce7ce3f9c45"
   },
   "scripts": {
     "build": "node ./index.js --build"
