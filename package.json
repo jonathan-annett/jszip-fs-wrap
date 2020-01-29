@@ -18,7 +18,7 @@
     "build": "node ./index.js --build"
   },
   "keywords": [],
-  "main": "index.js",
+  "main": "index.pkg.js",
   "name": "jszip-fs-wrap",
   "repository": {
     "url": "https://github.com/jonathan-annett/jszip-fs-wrap",
