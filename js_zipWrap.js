@@ -454,7 +454,8 @@ function zipWrap(zip,nodePath,cb){
 
     function view_chdir(path,recursive) {
 
-        var true_path =true_path_from_path(path);
+        //var true_path = true_path_from_path(path);
+        var true_path = true_path_from_relative_path(cwd,path)
 
         //if (true_path==="/") return wrap;
 
@@ -560,7 +561,8 @@ function zipWrap(zip,nodePath,cb){
                                                return addWatcher (make_mine(path),options,listener);
                        }},
                        view_dir        : { value : function view_dir(path,recursive) {
-                                               return view_chdir(make_mine(path),recursive);
+                                               //return view_chdir(make_mine(path),recursive);
+                                               return view_chdir(true_path_from_relative_path(true_path,path),recursive);
                                            }
                        },
                        chdir           : {
